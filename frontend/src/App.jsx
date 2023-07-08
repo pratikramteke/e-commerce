@@ -1,34 +1,40 @@
-
-import "./App.css";
-import Home from "./pages/Home";
-import LoginPage from './pages/LoginPage';
-import SignupPage from './pages/SignupPage';
+import "./App.css"
+import Home from "./pages/Home"
+import LoginPage from "./pages/LoginPage"
+import SignupPage from "./pages/SignupPage"
+import Cart from "./features/cart/Cart"
+import CartPage from "./pages/CartPage"
 import {
   createBrowserRouter,
   RouterProvider,
   Route,
   Link,
-} from 'react-router-dom';
+} from "react-router-dom"
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Home></Home>,
   },
   {
-    path: '/login',
+    path: "/login",
     element: <LoginPage></LoginPage>,
   },
   {
-    path: '/signup',
+    path: "/signup",
     element: <SignupPage></SignupPage>,
   },
-]);
+  {
+    // only for testing - then page will be added
+    path: "/cart",
+    element: <CartPage></CartPage>,
+  },
+])
 
 export default function App() {
   return (
     <div className="App">
-     <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </div>
-  );
+  )
 }
